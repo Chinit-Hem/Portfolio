@@ -1,0 +1,261 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f7f9f7;
+  --foreground: #18211d;
+  --surface: #ffffff;
+  --surface-muted: #eef3ef;
+  --muted: #63716a;
+  --border: #d9e2dc;
+  --brand: #176b4d;
+  --brand-dark: #10533b;
+  --accent: #c6a15b;
+}
+
+.dark {
+  --background: #101714;
+  --foreground: #f1f5f2;
+  --surface: #15201b;
+  --surface-muted: #1b2922;
+  --muted: #9baba2;
+  --border: #2b3c33;
+  --brand: #4fbb8a;
+  --brand-dark: #79d2a8;
+  --accent: #d8b878;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+html[lang="km"] body {
+  font-family: var(--font-kantumruy-pro), "Noto Sans Khmer", "Khmer OS System", system-ui, sans-serif;
+  line-height: 1.65;
+}
+
+html[lang="zh-CN"] body {
+  font-family: "PingFang SC", "Noto Sans SC", "Microsoft YaHei", system-ui, sans-serif;
+}
+
+@page {
+  size: A4 portrait;
+  margin: 9mm 12mm;
+}
+
+@media print {
+  html,
+  body {
+    width: auto !important;
+    min-height: 0 !important;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  nav,
+  footer,
+  .resume-actions {
+    display: none !important;
+  }
+
+  body,
+  .resume-page {
+    background: #ffffff !important;
+  }
+
+  main {
+    min-height: 0 !important;
+  }
+
+  .resume-page {
+    padding: 0 !important;
+  }
+
+  .resume-page .container-custom {
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .resume-sheet {
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    color: #18211d !important;
+    font-size: 8.5pt !important;
+    line-height: 1.28 !important;
+  }
+
+  .resume-sheet header {
+    padding-bottom: 3mm !important;
+    border-color: #176b4d !important;
+  }
+
+  .resume-sheet header h1 {
+    font-size: 22pt !important;
+    line-height: 1 !important;
+    color: #18211d !important;
+  }
+
+  .resume-sheet header > div > p {
+    margin-top: 1.5mm !important;
+    font-size: 10pt !important;
+    line-height: 1.2 !important;
+    color: #176b4d !important;
+  }
+
+  .resume-sheet .resume-contact {
+    margin-top: 2.5mm !important;
+    column-gap: 3mm !important;
+    row-gap: 0.5mm !important;
+    font-size: 7.5pt !important;
+    line-height: 1.25 !important;
+    color: #5f6f66 !important;
+  }
+
+  .resume-sheet .resume-photo {
+    width: 22mm !important;
+    height: 27mm !important;
+    border-color: #cbd8d0 !important;
+  }
+
+  .resume-sheet > div {
+    margin-top: 3mm !important;
+  }
+
+  .resume-sheet > div > section + section {
+    margin-top: 3mm !important;
+  }
+
+  .resume-sheet section {
+    break-inside: avoid;
+  }
+
+  .resume-sheet section h2 {
+    padding-bottom: 1mm !important;
+    border-color: #176b4d !important;
+    font-size: 8.5pt !important;
+    line-height: 1.2 !important;
+    color: #176b4d !important;
+  }
+
+  .resume-sheet section > :not(h2) {
+    margin-top: 1.7mm !important;
+  }
+
+  .resume-sheet section p,
+  .resume-sheet section li,
+  .resume-sheet section dt,
+  .resume-sheet section dd,
+  .resume-sheet section h3 {
+    font-size: 8.5pt !important;
+    line-height: 1.28 !important;
+  }
+
+  .resume-sheet section h3,
+  .resume-sheet section dt {
+    color: #18211d !important;
+  }
+
+  .resume-sheet section ul,
+  .resume-sheet section dl,
+  .resume-sheet section [class*="space-y-"] {
+    row-gap: 0 !important;
+  }
+
+  .resume-sheet section li + li,
+  .resume-sheet section dl > div + div {
+    margin-top: 0.7mm !important;
+  }
+}
+
+::selection {
+  background: rgba(23, 107, 77, 0.22);
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-[#101714];
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply bg-emerald-800 hover:bg-emerald-900 text-white font-medium py-2 px-5 rounded-lg transition-colors duration-200 dark:bg-emerald-400 dark:hover:bg-emerald-300 dark:text-[#101714];
+  }
+
+  .btn-secondary {
+    @apply bg-white hover:bg-emerald-50 text-slate-900 font-medium py-2 px-5 rounded-lg border border-[#d9e2dc] transition-colors duration-200 dark:bg-[#15201b] dark:hover:bg-[#1b2922] dark:text-white dark:border-[#2b3c33];
+  }
+
+  .section-spacing {
+    @apply py-16 md:py-24 scroll-mt-24;
+  }
+
+  .heading-xl {
+    @apply text-4xl md:text-6xl font-bold tracking-normal leading-tight;
+  }
+
+  .heading-lg {
+    @apply text-3xl md:text-4xl font-bold tracking-normal;
+  }
+
+  .heading-md {
+    @apply text-2xl md:text-3xl font-semibold tracking-normal;
+  }
+
+  .text-muted {
+    color: var(--muted);
+  }
+
+  .section-eyebrow {
+    @apply text-sm font-semibold uppercase tracking-wide text-emerald-800 dark:text-emerald-300;
+  }
+
+  .panel {
+    @apply rounded-lg border bg-white shadow-sm dark:bg-[#15201b];
+    border-color: var(--border);
+  }
+
+  .muted-panel {
+    @apply rounded-lg border bg-[#eef3ef] dark:bg-[#1b2922];
+    border-color: var(--border);
+  }
+
+  .tag {
+    @apply inline-flex items-center rounded-md border bg-white px-2.5 py-1 text-xs font-medium text-slate-700 dark:bg-[#15201b] dark:text-slate-300;
+    border-color: var(--border);
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/30 backdrop-blur-md dark:bg-black/30;
+  }
+
+  .smooth-transition {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-slate-950 via-emerald-900 to-emerald-700 bg-clip-text text-transparent dark:from-white dark:via-emerald-200 dark:to-amber-200;
+  }
+}

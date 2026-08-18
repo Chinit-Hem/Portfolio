@@ -1,0 +1,16 @@
+# Public Directory Structure
+
+This directory contains static assets for the portfolio:
+
+## /projects
+Place your project screenshots here:
+- vms-dashboard.png
+- sms-dashboard.png
+- loan-dashboard.png
+- lms-dashboard.png
+- system-hub.png
+
+## resume.pdf
+Place your resume PDF file here
+
+The portfolio will automatically display placeholder images if these files are missing.

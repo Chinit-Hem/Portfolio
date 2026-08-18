@@ -1,0 +1,82 @@
+{
+  "name": "Hem Chinit",
+  "title": "IT Executive | Full-Stack Developer",
+  "location": "Phnom Penh, Cambodia",
+  "email": "chinithem81@gmail.com",
+  "phone": "011311161",
+  "telegram": "097 424 3312",
+  "linkedin": "linkedin.com/in/chinit-hem",
+  "github": "github.com/Chinit-Hem",
+  "summary": "IT Executive and full-stack developer with hands-on experience supporting business technology, maintaining day-to-day IT operations, and building practical internal web systems. Skilled at translating operational requirements into clear digital workflows using Next.js, React, Node.js, and PostgreSQL. Developing toward software engineering and IT project management.",
+  "experience": [
+    {
+      "title": "IT & Admin Officer",
+      "company": "Emerald Cash Co., Ltd",
+      "period": "Dec 2022 - Present",
+      "bullets": [
+        "Provide user support for hardware, software, printers, workstations, and basic network issues.",
+        "Support CCTV, GPS, file, and server-related operations and coordinate technical follow-up.",
+        "Gather user requirements and help design and implement internal Stock and Vehicle Management workflows.",
+        "Prepare technical documentation and assist with system testing, user adoption, and vendor coordination."
+      ]
+    },
+    {
+      "title": "Junior Developer",
+      "company": "Freelance Projects",
+      "period": "Jan 2023 - Dec 2023",
+      "bullets": [
+        "Developed responsive web applications using React and Node.js.",
+        "Worked with clients to understand requirements and deliver solutions aligned with business needs."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Vehicle Management System (VMS)",
+      "technology": "Next.js, TypeScript, PostgreSQL, Neon, Cloudinary",
+      "description": "Internal system for vehicle records, valuation support, GPS information, search, dashboards, and audit-oriented workflows."
+    },
+    {
+      "name": "Stock / Asset Management System (SMS)",
+      "technology": "Next.js, TypeScript, PostgreSQL, REST APIs",
+      "description": "Asset registry and transfer workflow covering ownership, location, approvals, transfer history, and audit logs."
+    },
+    {
+      "name": "Loan Management System",
+      "technology": "Next.js, TypeScript, PostgreSQL",
+      "description": "System concept for borrower records, vehicle collateral, LTV, repayments, arrears, branch KPIs, and operational alerts."
+    }
+  ],
+  "education": {
+    "school": "Royal University of Phnom Penh",
+    "degree": "Bachelor of Science in Information Technology",
+    "period": "2022 - 2026",
+    "gpa": "3.22",
+    "highlights": [
+      "Delivered technical presentations on Shell Scripting.",
+      "Developed a Task Management mobile application using Flutter."
+    ]
+  },
+  "skills": [
+    {
+      "label": "Development",
+      "items": "Next.js, React, TypeScript, JavaScript, Node.js, HTML, CSS, Tailwind CSS"
+    },
+    {
+      "label": "Backend & Data",
+      "items": "Next.js API routes, PostgreSQL, Neon, REST APIs"
+    },
+    {
+      "label": "Cloud & Tools",
+      "items": "Git, GitHub, Vercel, Cloudinary, VS Code"
+    },
+    {
+      "label": "IT Operations",
+      "items": "Windows, hardware/software support, printers, networking fundamentals, CCTV, GPS, file/server operations"
+    },
+    {
+      "label": "Project Skills",
+      "items": "Requirement gathering, documentation, testing, stakeholder communication, deployment support"
+    }
+  ]
+}
